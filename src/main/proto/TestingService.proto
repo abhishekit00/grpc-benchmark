@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.java.testing_service";
+option java_outer_classname = "TestingServiceProto";
+option objc_class_prefix = "HLW";
+
+package testing_service;
+
+service Testing {
+	rpc TestingRequestHandler (TestingRequest) returns (TestingResponse) {}
+	}
+
+	message TestingRequest {
+  	string var_one=1;
+  	string var_two = 2;
+    string var_three = 3;
+	}
+
+	message TestingResponse {
+  	string response = 1;
+	}
+
